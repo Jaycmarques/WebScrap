@@ -1,4 +1,4 @@
-Price Monitoring Bot
+Price Monitoring Bot:
 This Python script monitors the price of a specific product from various e-commerce websites and sends notifications via Telegram if the price drops below a defined threshold.
 
 Features
