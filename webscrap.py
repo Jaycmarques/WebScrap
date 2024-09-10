@@ -104,8 +104,8 @@ async def monitorar_preco():
         print(f"Melhor preço atual: R${best_price:.2f}")
         print(f"URL do melhor preço: {best_url}")
 
-        preco_alvo = 129.00  # Defina seu preço alvo
-        if best_price < preco_alvo:
+        price_target = 129.00  # Defina seu preço alvo
+        if best_price < price_target:
             mensagem = f"""O preço caiu! Melhor preço atual: R${best_price:.2f}
 Compre aqui: {best_url}"""
             await send_telegram_message(mensagem, chat_id, telegram_token)
