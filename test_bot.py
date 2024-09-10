@@ -63,13 +63,13 @@ async def send_telegram_message(message, chat_id, token):
 
 async def monitorar_preco():
     target_url = "https://www.paguemenos.com.br/fralda-pampers-pants-ajuste-total-xxg-60-unidades/p?idsku=54401"
-    preco_alvo = 140.00  # Defina seu preço alvo
+    price_target = 140.00  # Defina seu preço alvo
 
     price = check_price(target_url)
     if price is not None:
         print(f"Preço encontrado: R${price:.2f}")
 
-        if price < preco_alvo:
+        if price < price_target:
             mensagem = f"""O preço caiu! Melhor preço atual: R${price:.2f}
 Compre aqui: {target_url}"""
             await send_telegram_message(mensagem, chat_id, telegram_token)
