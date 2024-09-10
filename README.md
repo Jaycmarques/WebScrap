@@ -39,7 +39,7 @@ This Python script monitors the price of a specific product from various e-comme
 
 4. **Update the Product URL and Target Price:**
    - Modify the `target_url` variable in the script to the URL of the product you want to monitor.
-   - Set the `preco_alvo` (target price) to your desired value.
+   - Set the `price_target` to your desired value.
 
 ## Usage
 
