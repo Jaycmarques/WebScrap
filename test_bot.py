@@ -28,7 +28,7 @@ def check_price(url):
 
         # Encontrar o preço usando a classe CSS fornecida
         price_tag = soup.find(
-            "span", class_="vtex-store-components-3-x-currencyInteger")
+            "span", class_="a-offscreen")
         if price_tag:
             price_text = price_tag.text.strip()
             # Processar o texto do preço
@@ -62,7 +62,7 @@ async def send_telegram_message(message, chat_id, token):
 
 
 async def monitorar_preco():
-    target_url = "https://www.paguemenos.com.br/fralda-pampers-pants-ajuste-total-xxg-60-unidades/p?idsku=54401"
+    target_url = "https://www.amazon.com.br/Fralda-Pants-Premium-Pampers-Pacote/dp/B07X83FF8X/ref=sr_1_6?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2LUM3OSBHFJKW&dib=eyJ2IjoiMSJ9.HI0AJEPt4zL6Z1u120QdrepTnqaKIF__Vu2wj0y2OIbIcuV4o_Ce8Cv85b6gKF3ekDFg921vyEpLGoOqvsAmzRFmOWRT8Q3OH-CoxjKsH19Ymts1ulmckEFxFC5x4lJjPWl-6TM5RFMcx1IFl8VRDosP43DT7-Y2mMeK5VfwntZoKwNRJRqVubYxTU3U7ts85lN_2lu2IrIz20wgIi7XwSDoDBbSnfJnDgDGfvFFs05cYoBgTPctmkQdbOodUSGF1YPE5Yd7Kwa6gdgyP9U_tdWvqwg-9k6J3AEBtnE8GTo.hoTUsO6BCsmfKTjVkbjptTaRQiGEnYGRa0LdZURRnm0&dib_tag=se&keywords=xxg+60+pampers&qid=1726089642&s=hpc&sprefix=xxg+60+pampers%2Chpc%2C172&sr=1-6&ufe=app_do%3Aamzn1.fos.a492fd4a-f54d-4e8d-8c31-35e0a04ce61e"
     price_target = 140.00  # Defina seu preço alvo
 
     price = check_price(target_url)
